@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class CardatabaseApplication {
+	// 로깅 수준에는 TRACE, DEBUG, INFO, WARN, ERROR, FATAL, OFF의 7가지가 있다.
+	// 로깅 수준은 application.properties 파일에서 구성할 수 있다.
 	private static final Logger logger = LoggerFactory.getLogger(CardatabaseApplication.class);
 
 	public static void main(String[] args) {
