@@ -14,7 +14,11 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Owner {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -22,6 +26,7 @@ public class Owner {
 	private String firstName, lastName;
 	
 //	// 일대다일 경우
+	@JsonIgnore
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="owner")
 	private List<Car> cars;
 	
