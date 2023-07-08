@@ -23,7 +23,7 @@ public class Owner {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long ownerId;
-	private String firstName, lastName;
+	private String firstname, lastname;
 	
 //	// 일대다일 경우
 	@JsonIgnore
@@ -37,10 +37,10 @@ public class Owner {
 	
 	public Owner() {}
 
-	public Owner(String firstName, String lastName) {
+	public Owner(String firstname, String lastname) {
 		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
+		this.firstname = firstname;
+		this.lastname = lastname;
 	}
 
 	public long getOwnerId() {
@@ -51,20 +51,20 @@ public class Owner {
 		this.ownerId = ownerId;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getFirstname() {
+		return firstname;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getLastname() {
+		return lastname;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 
 	// 일대다일 경우
